@@ -1,3 +1,4 @@
+
 /* Shared
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .button {
@@ -15,24 +16,14 @@
   margin-bottom: 1.2rem;
 }
 
-/* Hero
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-.phones {
-  position: relative;
-}
-.phone {
-  position: relative;
-  max-width: 80%;
-  margin: 3rem auto -12rem;
-}
-.phone + .phone {
-  display: none;
-}
-
 /* Values
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .values {
   background-image: url('../images/values-bg.jpg');
+  filter:alpha(opacity=50);
+  -moz-opacity:0.5;
+  -khtml-opacity: 0.5;
+  opacity: 0.8;
   background-size: cover;
   color: #fff;
   padding-bottom: 5rem;
@@ -54,21 +45,11 @@
   font-weight: 300;
 }
 
+
 /* Contact
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .contact {
   border-bottom: 1px solid #ddd;
-}
-
-/* Categories
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-.categories {
-  background-image: url('../images/values-bg.jpg');
-  background-size: cover;
-  color: #fff;
-}
-.categories .section-description {
-  margin-bottom: 4rem;
 }
 
 /* Bigger than 550 */
