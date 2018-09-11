@@ -16,8 +16,6 @@
     "gulp-minify-html": "^1.0.0",
     "gulp-run": "^1.6.10",
     "gulp-useref": "^1.1.1",
-    "main-bower-files": "^2.5.0",
-    "opn": "^1.0.1",
     "path": "^0.12.7",
     "wiredep": "^2.2.2"
   },

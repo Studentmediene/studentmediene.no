@@ -39,14 +39,6 @@ gulp.task('images', function () {
     .pipe(gulp.dest('dist/images'));
 });
 
-gulp.task('fonts', function () {
-  return gulp.src(require('main-bower-files')({
-    filter: '**/*.{eot,svg,ttf,woff,woff2}'
-  }).concat('app/fonts/**/*'))
-    .pipe(gulp.dest('.tmp/fonts'))
-    .pipe(gulp.dest('dist/fonts'));
-});
-
 gulp.task('extras', function () {
   return gulp.src([
     'app/*.*',
@@ -72,7 +64,7 @@ gulp.task('wiredep', function () {
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('produce',['wiredep','css','images','fonts', 'html','extras','static']);
+gulp.task('produce',['wiredep','css','images', 'html','extras','static']);
 
 gulp.task('serve', ['produce'], function () {
   browserSync({

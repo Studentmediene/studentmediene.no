@@ -1,3 +1,6 @@
+body {
+    margin: 0;
+}
 
 /* Shared
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -50,6 +53,12 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .contact {
   border-bottom: 1px solid #ddd;
+}
+
+@media (max-width: 650px) {
+.four.columns.value.earlybreak {
+    width: 100%;
+    margin-left: 0%;
 }
 
 /* Bigger than 750 */
