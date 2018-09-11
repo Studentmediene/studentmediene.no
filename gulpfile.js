@@ -5,12 +5,7 @@ var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
-var browserify = require('browserify');
-var babelify = require('babelify');
-var source = require('vinyl-source-stream');
 var run = require('gulp-run');
-var less = require('gulp-less');
-var path = require('path');
 
 
 gulp.task('css', function () {
@@ -18,14 +13,6 @@ gulp.task('css', function () {
     .pipe(gulp.dest('.tmp/styles'))
     .pipe(gulp.dest('dist/styles'))
     .pipe(reload({stream: true}));
-});
-
-gulp.task('less', function () {
-  return gulp.src('./less/**/*.less')
-    .pipe(less({
-      paths: [ path.join(__dirname, 'less', 'includes') ]
-    }))
-    .pipe(gulp.dest('./public/css'));
 });
 
 gulp.task('html', function () {
@@ -85,7 +72,7 @@ gulp.task('wiredep', function () {
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('produce',['wiredep','less','css','images','fonts', 'html','extras','static']);
+gulp.task('produce',['wiredep','css','images','fonts', 'html','extras','static']);
 
 gulp.task('serve', ['produce'], function () {
   browserSync({
@@ -102,11 +89,11 @@ gulp.task('serve', ['produce'], function () {
   // watch for changes
   gulp.watch([
     'app/*.html',
+    'app/styles/*.css',
     'app/images/**/*',
     '.tmp/fonts/**/*'
   ]).on('change', reload);
 
-  gulp.watch('app/styles/**/*.less', ['less']);
   gulp.watch('app/fonts/**/*', ['fonts']);
   gulp.watch('bower.json', ['wiredep', 'fonts']);
 });
