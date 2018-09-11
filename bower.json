@@ -2,8 +2,7 @@
   "name": "studentmediene.no",
   "private": true,
   "dependencies": {
-    "skeleton": "~2.0.4",
-    "font-awesome": "~4.7.0"
+    "skeleton": "~2.0.4"
   },
   "devDependencies": {}
 }
