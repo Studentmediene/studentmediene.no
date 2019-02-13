@@ -8,6 +8,14 @@ body {
   border-radius: 100px;
 }
 
+a, a:visited {
+  color: #237CB3;
+}
+
+a:hover, a:visited:hover {
+  color: #50A7DC;
+}
+
 /* Sections
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .section {
@@ -23,10 +31,6 @@ body {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .values {
   background-image: url('../images/values-bg.jpg');
-  filter:alpha(opacity=50);
-  -moz-opacity:0.5;
-  -khtml-opacity: 0.5;
-  opacity: 0.8;
   background-size: cover;
   color: #fff;
   padding-bottom: 5rem;
@@ -41,11 +45,22 @@ body {
   margin-bottom: .5rem;
 }
 .value-heading {
+  font-weight: normal;
   margin-bottom: .3rem;
 }
-.value-description {
-  opacity: .8;
-  font-weight: 300;
+.value-description, .values .value-heading, .values .section-description {
+  /* Since the font is so lightweight, it is harder to read on lower contrasts */
+  font-weight: 500;
+}
+.values .button, .values .button:visited {
+  font-weight: bold;
+  background-color: #227CB4;
+  border-color: #196493;
+  box-shadow: rgba(255, 255, 255, 0.15) 0 0 10px;
+}
+.values .button:hover, .values .button:visited:hover {
+  background-color: #4CA5DD;
+  border-color: #227CB4;
 }
 
 
