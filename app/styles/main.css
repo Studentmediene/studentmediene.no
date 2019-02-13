@@ -48,9 +48,19 @@ a:hover, a:visited:hover {
   font-weight: normal;
   margin-bottom: .3rem;
 }
-.value-description, .values .value-heading {
+.value-description, .values .value-heading, .values .section-description {
   /* Since the font is so lightweight, it is harder to read on lower contrasts */
   font-weight: 500;
+}
+.values .button, .values .button:visited {
+  font-weight: bold;
+  background-color: #227CB4;
+  border-color: #196493;
+  box-shadow: rgba(255, 255, 255, 0.15) 0 0 10px;
+}
+.values .button:hover, .values .button:visited:hover {
+  background-color: #4CA5DD;
+  border-color: #227CB4;
 }
 
 
