@@ -8,6 +8,14 @@ body {
   border-radius: 100px;
 }
 
+a, a:visited {
+  color: #237CB3;
+}
+
+a:hover, a:visited:hover {
+  color: #50A7DC;
+}
+
 /* Sections
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .section {
